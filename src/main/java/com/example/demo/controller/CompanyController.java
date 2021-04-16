@@ -36,24 +36,19 @@ public class CompanyController {
 	@RequestMapping("/company/{name}")
 	public String company(@PathVariable("name") String id, Model model) {
 		int idx = 0;
-		
-		
+
+
 		for(int i =  0; i<companyList.size(); i++) {
 			if(companyList.get(i).getName().equals(id)) {
-				//layout 바꿔보기
-				model.addAttribute(companyList.get(i));
 				idx = i;
 				
 			}
 		}
 		System.out.println(companyList.get(idx).getLayoutType());
 		
-		if(companyList.get(idx).getLayoutType().equals("table")) {
-			return "employeeList";
-		}
-		else {
-			return "employeeList2";
-		}
+	
+		model.addAttribute(companyList.get(idx));
+		return "employeeList";
 	}
 	
 	
