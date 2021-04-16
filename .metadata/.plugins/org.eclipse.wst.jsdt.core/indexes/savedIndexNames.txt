@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+E:\07.dev\eclipse_spring_work\thymeleaf-springboot-ex\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2029534153.index
+186471443.index
+1831015299.index
+2331589066.index
+4043413404.index
+1111384914.index

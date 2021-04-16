@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="shop_api_test"/>
+<aop-project name="kosmoJns"/>
+<aop-project name="springMybatisTest"/>
+<aop-project name="SpringTest"/>
+<aop-project name="testSpringBoot"/>
+</aop-reference-model>

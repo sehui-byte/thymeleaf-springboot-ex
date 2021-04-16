@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  layout:decorator="layout/defaultLayout">
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>Company and Employees</title>
 </head>
 <body>
-
-<th:block layout:fragment="content">
-<div th:if="${company.layoutType} == 'list'" th:replace ="/modules/employeeList2"></div>
+	<th:block layout:fragment="content">
+		<div th:if="${company.layoutType eq 'table'}">
+			<th:block th:replace ="fragments/employeeList :: fragment-content"></th:block>
+		</div>
+		
+		<div th:if="${company.layoutType eq 'list'}">
+			<th:block th:replace ="fragments/employeeList2 :: fragment-content"></th:block>
+		</div>
+	</th:block>
 	
-<div th:if="${company.layoutType} == 'table'" th:replace ="/modules/employeeList"></div>
-
-</th:block>
-
 </body>
 </html>
