@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+레이아웃 고르기
+<form th:action="@{/chooseLayout}" method="POST">
+<input type ="radio" name="type" th:value="table">table
+<input type="radio" name="type" th:value="list">list
+<button type="submit">>확인</button>
+</form> 
+</body>
+</html>
